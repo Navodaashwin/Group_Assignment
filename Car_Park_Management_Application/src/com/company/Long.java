@@ -8,5 +8,12 @@ public class Long extends ParkingSlot {
         super(id, available, GPS_Coordinate);
         this.Width = Width;
         this.length = length;
-    }
+    }/*
+    @Override
+    //method for display long slots details
+    public void displaySlot(){
+        super.displaySlot()
+        System.out.println("Width : "+Width);
+        System.out.println("Length : " + length);
+    }*/
 }

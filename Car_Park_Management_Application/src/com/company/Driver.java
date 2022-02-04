@@ -10,4 +10,9 @@ public class Driver {
         MobileNo = mobileNo;
         UniversityID = universityID;
     }
+    public void displayDriver(){
+        System.out.println("vehicle No : "+VehicleNo);
+        System.out.println("Mobile No : " + MobileNo);
+        System.out.println("University ID : "+ UniversityID);
+    }
 }
