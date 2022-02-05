@@ -19,4 +19,18 @@ public class ParkingArea {
         this.GPS_CoordinateExit = GPS_CoordinateExit;
         this.Full = Full;
     }
+
+    public ArrayList<ParkingSlot> getSlot() {
+        return Slot;
+    }
+
+
+    public void setSlot(ArrayList<ParkingSlot> slot) {
+        Slot = slot;
+    }
+
+    // add parking slot to area
+    public void AddSlot(ParkingSlot Slot){
+        this.Slot.add(Slot);
+    }
 }
