@@ -1,7 +1,7 @@
 package com.company;
 
 public class Long extends ParkingSlot {
-
+    //private attributes
     private float Width;
     private float length;
 
@@ -9,15 +9,15 @@ public class Long extends ParkingSlot {
         super(id, available, GPS_Coordinate);
         this.Width = Width;
         this.length = length;
-    }/*
+    }
 
     @Override
     //method for display long slots details
     public void displaySlot(){
-        super.displaySlot()
+        super.displaySlot();
         System.out.println("Width : "+Width);
         System.out.println("Length : " + length);
-    }*/
+    }
 
     //getters and setters
     public float getWidth() {
@@ -27,7 +27,7 @@ public class Long extends ParkingSlot {
         return length;
     }
     public void setWidth(float width) {
-        Width = width;
+        this.Width = width;
     }
     public void setLength(float length) {
         this.length = length;

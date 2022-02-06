@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        University university = new University();
         //temporary variable for add parking area
         ParkingArea temp;
 

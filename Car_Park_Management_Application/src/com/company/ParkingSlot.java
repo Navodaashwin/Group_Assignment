@@ -13,7 +13,7 @@ public class ParkingSlot {
             this.Available = Available;
             this.GPS_Coordinate = GPS_Coordinate;
             this.driver = null;
-    }/*
+    }
     public void displaySlot(){
             System.out.println("ID : " + getId());
             System.out.println("Coordinate : " +getGPS_Coordinate());
@@ -25,6 +25,30 @@ public class ParkingSlot {
                 System.out.println("Driver Details : ");
                 getDriver().displayDriver();
             }
-    }*/
+    }
 
+    public String getId(){
+            return id;
+    }
+    public boolean isAvailable(){
+            return Available;
+    }
+    public String getGPS_Coordinate(){
+            return GPS_Coordinate;
+    }
+    public Driver getDriver(){
+            return driver;
+    }
+    public void setId(String id){
+            this.id = id;
+    }
+    public void setAvailable(boolean available){
+            Available = available;
+    }
+    public void setGPS_Coordinate(String GPS_Coordinate){
+            this.GPS_Coordinate = GPS_Coordinate;
+    }
+    public void setDriver(Driver driver){
+            this.driver = driver;
+    }
 }

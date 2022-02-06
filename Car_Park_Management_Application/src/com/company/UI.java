@@ -17,5 +17,24 @@ public class UI {
         System.out.println("Please enter 2 for check-out a vehicle");
         System.out.println("Please enter 3 for check parking slots");
         System.out.println("Enter 0 anytime for return back to main menu");
+    }/*
+    public int readInt(String msg){
+        System.out.print(msg+" : ");
+        try{
+            int check = scan.nextInt();
+            scan.nextLine();
+            return check;
+        }
+        catch (Exception e){
+            System.out.println("..........................Invalid Input................");
+            return 0;
+        }
     }
+
+    //method for getting a command from the user
+    public String readStr(String msg){
+        System.out.print(msg + " : ");
+        System check = scan.nextLine();
+        return check;
+    }*/
 }
