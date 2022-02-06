@@ -14,4 +14,13 @@ public class Handicapped extends ParkingSlot {
         super.displaySlot();
         System.out.println("Nearest Building ; " + NearestBuilding);
     }
+
+    //getters and setters
+    public String getNearestBuilding() {
+        return NearestBuilding;
+    }
+
+    public void setNearestBuilding(String nearestBuilding) {
+        NearestBuilding = nearestBuilding;
+    }
 }

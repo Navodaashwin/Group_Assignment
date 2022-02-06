@@ -9,7 +9,7 @@ public class ParkingArea {
     private String FacultyInstitute;
     private String GPS_CoordinateEntrance;
     private String GPS_CoordinateExit;
-    private boolean Full; //for check parking area is full or not
+    private boolean Full;                        //for check parking area is full or not
 
     //store slots created by Parking class
     private ArrayList<ParkingSlot> Slot = new ArrayList<ParkingSlot>();
@@ -22,64 +22,96 @@ public class ParkingArea {
         this.GPS_CoordinateExit = GPS_CoordinateExit;
         this.Full = Full;
     }
+
     // method for displaying all parking areas
     public void displayParkingArea(){
         System.out.println("ID : " + getID());
-        System.out.println("Faculty : " + getFacultyInstititue());
-        System.out.println("Coordinate Entrance :  : " + getGPS_CoordinateEntarnce());
+        System.out.println("Faculty : " + getFacultyInstitute());
+        System.out.println("Coordinate Entrance :  : " + getGPS_CoordinateEntrance());
         System.out.println("Coordinate Exit : " + getGPS_CoordinateExit());
         System.out.println("is Full : " + isFull());
     }
+
     //method for displaying all parking slots in a parking area
     public void displaySlotList(){
-        for (int i=0; i<Slot.size();i++){
-            if (Slot.get(i).isAvailable()) {
-                System.out.println("................................................................");
-                System.out.println("Slot Serial Number : " + (i + 1));
+        for(int i=0; i<Slot.size(); i++) {
+            System.out.println("..........................................................");
+            System.out.println("Slot Serial Number : "+ (i+1));
+            Slot.get(i).displaySlot();
+
+        }
+    }
+
+    //method for displaying only available parking slots in some parking area
+    public void displayAvailableSlotList(){
+        for(int i=0; i<Slot.size(); i++) {
+            if(Slot.get(i).isAvailable()){
+                System.out.println("..........................................................");
+                System.out.println("Slot Serial Number : "+ (i+1));
                 Slot.get(i).displaySlot();
             }
         }
-
     }
 
-
+    //getters and setters
     public ArrayList<ParkingSlot> getSlot() {
         return Slot;
     }
+
     public String getID(){
         return ID;
     }
-    public String getFacultyInstititue(){
+
+    public String getFacultyInstitute() {
         return FacultyInstitute;
     }
-    public String getGPS_CoordinateEntarnce(){
+
+    public String getGPS_CoordinateEntrance() {
         return GPS_CoordinateEntrance;
     }
+
     public String getGPS_CoordinateExit(){
         return GPS_CoordinateExit;
     }
 
-
     public void setSlot(ArrayList<ParkingSlot> slot) {
         Slot = slot;
     }
+
     public boolean isFull(){
         return Full;
     }
+
     public void setID(String ID){
         this.ID = ID;
     }
-    public void setFacultyInstitute(String facultyInstitute){
+
+    public void setFacultyInstitute(String facultyInstitute) {
         FacultyInstitute = facultyInstitute;
     }
-    public void setGPS_CoordinateEntrance(String GPS_CoordinateEntrance){
+
+    public void setGPS_CoordinateEntrance(String GPS_CoordinateEntrance) {
         this.GPS_CoordinateEntrance = GPS_CoordinateEntrance;
     }
-    public  void setGPS_CoordinateExit(String GPS_CoordinateExit){
+
+    public void setGPS_CoordinateExit(String GPS_CoordinateExit) {
         this.GPS_CoordinateExit = GPS_CoordinateExit;
     }
+
     public void setFull(boolean Full){
         this.Full = Full;
+    }
+
+    //method for set parking slot as a full slot
+    public void setFull() {
+        boolean temp = true;
+        for (ParkingSlot slot : Slot) {
+            if (slot.isAvailable()) {
+                temp = false;
+                break;
+            }
+        }
+        Full=temp;
     }
 
     // add parking slot to area
